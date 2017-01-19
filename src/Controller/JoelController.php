@@ -8,7 +8,8 @@ class JoelController extends ControllerBase
 {   
     public function content()
     {
-        \Drupal\Core\Database\Database::setActiveConnection('your_table');
+        // 切換DB連線
+        \Drupal\Core\Database\Database::setActiveConnection('your_db');
         
         $result = \Drupal\Core\Database\Database::getConnection()
             ->select('your_table', 'n')
@@ -16,6 +17,7 @@ class JoelController extends ControllerBase
             ->range(0, 10)
             ->execute();
         
+        // 切回drupal預設的DB連線
         \Drupal\Core\Database\Database::setActiveConnection();
         
         while($record = $result->fetchAssoc()) {
