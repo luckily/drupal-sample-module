@@ -5,6 +5,9 @@
  - https://github.com/iwhitcomb/foobar/tree/master/foobar
  - https://www.drupal.org/docs/8/creating-custom-modules
  - http://josephbcasey.github.io/d8-interconnections-demo/
+ - http://bonze.tw/%E5%BE%8C%E7%AB%AF%E7%A0%94%E7%A9%B6%E5%AE%A4/drupal%E6%95%99%E5%AD%B8%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB
+ - https://www.youtube.com/playlist?list=PL5A47D8CB259CD1B7
+ - https://drupaltaiwan.org/book/export/html/170
 
 ## using
  1. $ cd your_drupal_folder/modules
