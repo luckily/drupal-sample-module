@@ -15,3 +15,12 @@
  3. go to http://your_drupal_domain/admin/modules to install [joel] module
  4. visit http://your_drupal_domain/joel
  5. you can see `Hi Joel` and `Hello world`
+ 
+## multiple database connection
+ - https://www.drupal.org/node/2710557
+ - http://drupal.stackexchange.com/questions/167569/how-can-i-setup-multiple-database-connections-in-drupal-8
+ 
+ 
+## drupal database query
+ - https://api.drupal.org/api/drupal/includes!database!database.inc/function/db_select/7.x
+ 
