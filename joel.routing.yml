@@ -1,0 +1,7 @@
+joel.content:
+  path: '/joel'
+  defaults:
+    _title: 'Hi Joel'
+    _controller: '\Drupal\joel\Controller\JoelController::content'
+  requirements:
+    _permission: 'access content'
