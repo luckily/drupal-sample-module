@@ -8,24 +8,20 @@ class JoelController extends ControllerBase
 {   
     public function content()
     {
-        \Drupal\Core\Database\Database::setActiveConnection('your_table');
+        \Drupal\Core\Database\Database::setActiveConnection('vcms');
         
         $result = \Drupal\Core\Database\Database::getConnection()
-            ->select('your_table', 'n')
+            ->select('testautoplay', 'n')
             ->fields('n')
-            ->range(0, 10)
+            ->range(0, 100)
             ->execute();
         
         \Drupal\Core\Database\Database::setActiveConnection();
         
-        while($record = $result->fetchAssoc()) {
-            print_r($record);
-            echo PHP_EOL;
-        }
-        
         return [
-            '#type' => 'markup',
-            '#markup' => 'Hi Joel',
+            '#theme' => 'index',
+            '#logs' => $result->fetchAll(),
+            '#show_text' => 'this is a report',
         ];
     }
 }

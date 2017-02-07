@@ -1,6 +1,38 @@
 <?php
 
 /**
- * @file
+ * @php
  * Joel module.
  */
+ 
+/**
+ * {module_name}_theme
+ * 這邊可以設定預設的view變數, 減少view引發的錯誤
+ */
+function joel_theme()
+{
+    return [
+        'index' => [
+            'variables' => [
+                'logs' => [], 'show_text' => null
+            ]
+        ],
+        'detail' => [
+            'variables' => [
+                'log' => ''
+            ]
+        ]
+    ];
+}
+
+/**
+ * template_preprocess_{template_name}
+ * 這邊的hook是用在controller要pass到view的
+ */
+function template_preprocess_index(&$variables)
+{
+    if(!empty($variables['show_text'])) {
+        $variables['show_text'] .= ' yes! yes!';
+    }
+}
+

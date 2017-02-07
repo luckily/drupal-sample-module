@@ -1,0 +1,26 @@
+{{ show_text }}
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>{{ 'movie_id'|t }}</th>
+      <th>{{ 'report_id'|t }}</th>
+      <th>{{ 'device_type'|t }}</th>
+      <th>{{ 'score'|t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i, log in logs  %}
+        <tr>
+            <td>{{ log.movie_id }}</td>
+            <td>{{ log.report_id }}</td>
+            <td>{{ log.device_type }}</td>
+            <td>{{ log.avg_score }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br>
