@@ -8,14 +8,16 @@ class JoelController extends ControllerBase
 {   
     public function content()
     {
-        \Drupal\Core\Database\Database::setActiveConnection('vcms');
+        // 切換DB連線
+        \Drupal\Core\Database\Database::setActiveConnection('your_db');
         
         $result = \Drupal\Core\Database\Database::getConnection()
-            ->select('testautoplay', 'n')
+            ->select('your_table', 'n')
             ->fields('n')
             ->range(0, 100)
             ->execute();
         
+        // 切回drupal預設的DB連線
         \Drupal\Core\Database\Database::setActiveConnection();
         
         return [

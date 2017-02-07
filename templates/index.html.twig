@@ -5,19 +5,17 @@
 <table>
   <thead>
     <tr>
-      <th>{{ 'movie_id'|t }}</th>
-      <th>{{ 'report_id'|t }}</th>
-      <th>{{ 'device_type'|t }}</th>
+      <th>{{ 'movie'|t }}</th>
+      <th>{{ 'device'|t }}</th>
       <th>{{ 'score'|t }}</th>
     </tr>
   </thead>
   <tbody>
     {% for i, log in logs  %}
         <tr>
-            <td>{{ log.movie_id }}</td>
-            <td>{{ log.report_id }}</td>
-            <td>{{ log.device_type }}</td>
-            <td>{{ log.avg_score }}</td>
+            <td>{{ log.movie }}</td>
+            <td>{{ log.device }}</td>
+            <td>{{ log.score }}</td>
         </tr>
     {% endfor %}
   </tbody>
